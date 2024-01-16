@@ -29,7 +29,9 @@
 }
 
 .btn:hover {
-  background-color: rgb(8, 44, 248);
+  background-color: rgb(156, 207, 28);
+  color: black;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 445px) {

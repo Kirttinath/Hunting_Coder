@@ -32,31 +32,38 @@ export default function Home() {
         <div>
           <h2 className={styles.h2}>Latest Blogs</h2>
           <div>
-            <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
+            <h3 className={styles.h3}>How to learn JavaScript in 2024?</h3>
             <p>
-              JavaScript is the language used to design logic for the web. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Ab, non!
+              Start by mastering the fundamentals – variables, loops, and
+              functions. Practice through small projects and explore the DOM.
+              Dive into asynchronous programming and gain a deep understanding
+              of ES6+ features for modern development.
             </p>
             <Link href="/blog">
               <button className={styles.btn}>Read More</button>
             </Link>
           </div>
           <div>
-            <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
+            <h3 className={styles.h3}>How to learn Typescript in 2024?</h3>
             <p className={styles.p}>
-              JavaScript is the language used to design logic for the web. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo?
+              Transition seamlessly from JavaScript by introducing static
+              typing. Learn TypeScript syntax, interfaces, and generics.
+              Leverage TypeScript's robust tooling for better code maintenance.
+              Practice converting existing JavaScript projects to TypeScript for
+              hands-on experience.
             </p>
             <Link href="/blog">
               <button className={styles.btn}>Read More</button>
             </Link>
           </div>
           <div>
-            <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
+            <h3 className={styles.h3}>How to learn React in 2024?</h3>
             <p>
-              JavaScript is the language used to design logic for the web. Lorem
-              ipsum dolor sit, amet consectetur adipisicing elit. Nulla,
-              laborum.
+              Begin with React basics, JSX, and components. Grasp state
+              management and component lifecycles. Explore React Router for
+              navigation and integrate with external APIs. Advance to stateful
+              management with Redux or Context API. Build and deploy projects to
+              solidify your React skills.
             </p>
             <Link href="/blog">
               <button className={styles.btn}>Read More</button>
