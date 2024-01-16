@@ -18,13 +18,22 @@
 .blogItemp {
   max-width: 45vw;
 }
-
 .btn {
   color: white;
-  background: rgb(34, 34, 34);
-  padding: 7px 6px;
-  cursor: pointer;
+  background: black;
+  padding: 7px 10px;
   border-radius: 6px;
   font-size: 12px;
   margin-bottom: 9px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(8, 44, 248);
+}
+
+@media screen and (max-width: 445px) {
+  .main {
+    padding-left: 1rem;
+  }
 }

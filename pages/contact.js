@@ -1,43 +1,44 @@
-import React, { useState } from "react";
-import styles from "../styles/Contact.module.css";
+import React, { useState } from 'react';
+import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [phone, setphone] = useState("");
-  const [desc, setdesc] = useState("");
+  const [name, setname] = useState('');
+  const [email, setemail] = useState('');
+  const [phone, setphone] = useState('');
+  const [desc, setdesc] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { phone, name, email, desc };
 
-    fetch("http://localhost:3000/api/postcontact", {
-      method: "POST", // or 'PUT'
+    fetch('http://localhost:3000/api/postcontact', {
+      method: 'POST', // or 'PUT'
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     })
       .then((response) => response.text())
       .then((data) => {
-        alert("Thanks for contacting us");
-        setphone("");
-        setname("");
-        setdesc("");
-        setemail("");
+        alert('Thanks for contacting us');
+        setphone('');
+        setname('');
+        setdesc('');
+        setemai('');
       })
       .catch((error) => {
-        console.error("Error:", error);
+        console.error('Error:', error);
       });
   };
+
   const handleChange = (e) => {
-    if (e.target.name == "phone") {
+    if (e.target.name == 'phone') {
       setphone(e.target.value);
-    } else if (e.target.name == "email") {
+    } else if (e.target.name == 'email') {
       setemail(e.target.value);
-    } else if (e.target.name == "desc") {
+    } else if (e.target.name == 'desc') {
       setdesc(e.target.value);
-    } else if (e.target.name == "name") {
+    } else if (e.target.name == 'name') {
       setname(e.target.value);
     }
   };
@@ -57,9 +58,11 @@ const Contact = () => {
             onChange={handleChange}
             id="name"
             name="name"
+            required
             aria-describedby="emailHelp"
           />
         </div>
+
         <div className={styles.mb3}>
           <label htmlFor="email" className={styles.formlabel}>
             Email address
@@ -71,12 +74,14 @@ const Contact = () => {
             onChange={handleChange}
             name="email"
             id="email"
+            required
             aria-describedby="emailHelp"
           />
           <div id="emailHelp" className={styles.formtext}>
-            We will never share your email with anyone else.
+            We'll never share your email with anyone else.
           </div>
         </div>
+
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>
             Phone
@@ -93,6 +98,7 @@ const Contact = () => {
         </div>
         <div className={styles.mb3}>
           <label className={styles.formlabel} htmlFor="desc">
+            {' '}
             Elaborate your concern
           </label>
           <textarea

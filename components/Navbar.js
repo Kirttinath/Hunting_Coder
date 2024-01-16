@@ -1,29 +1,30 @@
-import React from "react";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import React from 'react';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <nav className={styles.mainnav}>
       <ul>
         <Link href="/">
-          <Link legacyBehavior>
+          <a>
             <li>Home</li>
-          </Link>
+          </a>
         </Link>
         <Link href="/about">
-          <Link legacyBehavior>
+          <a>
             <li>About</li>
-          </Link>
+          </a>
         </Link>
         <Link href="/blog">
-          <Link legacyBehavior>
+          <a>
             <li>Blog</li>
-          </Link>
+          </a>
         </Link>
         <Link href="/contact">
-          <Link legacyBehavior>
+          <a>
             <li>Contact</li>
-          </Link>
+          </a>
         </Link>
       </ul>
     </nav>
@@ -31,3 +32,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
