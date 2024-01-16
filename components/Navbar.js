@@ -6,24 +6,24 @@ const Navbar = () => {
     <nav className={styles.mainnav}>
       <ul>
         <Link href="/">
-          <a>
+          <Link legacyBehavior>
             <li>Home</li>
-          </a>
+          </Link>
         </Link>
         <Link href="/about">
-          <a>
+          <Link legacyBehavior>
             <li>About</li>
-          </a>
+          </Link>
         </Link>
         <Link href="/blog">
-          <a>
+          <Link legacyBehavior>
             <li>Blog</li>
-          </a>
+          </Link>
         </Link>
         <Link href="/contact">
-          <a>
+          <Link legacyBehavior>
             <li>Contact</li>
-          </a>
+          </Link>
         </Link>
       </ul>
     </nav>
