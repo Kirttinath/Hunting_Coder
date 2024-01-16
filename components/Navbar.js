@@ -1,35 +1,18 @@
-import React from 'react';
-import styles from '../styles/Home.module.css';
+import React from 'react'
 import Link from 'next/link';
+import styles from "@/styles/Home.module.css";
 
 const Navbar = () => {
   return (
     <nav className={styles.mainnav}>
-      <ul>
-        <Link href="/">
-          <a>
-            <li>Home</li>
-          </a>
-        </Link>
-        <Link href="/about">
-          <a>
-            <li>About</li>
-          </a>
-        </Link>
-        <Link href="/blog">
-          <a>
-            <li>Blog</li>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a>
-            <li>Contact</li>
-          </a>
-        </Link>
-      </ul>
-    </nav>
-  );
-};
+          <ul>
+            <Link href='/'><li>Home</li></Link>
+            <Link href='/about'><li>About</li></Link>
+            <Link href='/blog'><li>Blog</li></Link>
+            <Link href='/contact'><li>Contact</li></Link>
+          </ul>
+        </nav>
+  )
+}
 
-export default Navbar;
-
+export default Navbar
