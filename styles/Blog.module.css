@@ -9,13 +9,13 @@
   padding-top: 3rem;
 }
 
-.blogItemh3 {
+.blogItem h3 {
   cursor: pointer;
   font-size: 2rem;
   margin: 0;
   padding: 0;
 }
-.blogItemp {
+.blogItem p {
   max-width: 45vw;
 }
 .btn {
