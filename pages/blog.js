@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import styles from '../styles/blog.module.css';
-import Link from 'next/link';
-import * as fs from 'fs';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useEffect, useState } from "react";
+import styles from "../styles/blog.module.css";
+import Link from "next/link";
+import * as fs from "fs";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Blog = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs);
@@ -24,7 +24,7 @@ const Blog = (props) => {
           hasMore={props.allCount !== blogs.length}
           loader={<h4>Loading...</h4>}
           endMessage={
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: "center" }}>
               <b>Yay! You have seen it all</b>
             </p>
           }
@@ -52,13 +52,13 @@ const Blog = (props) => {
 };
 
 export async function getStaticProps(context) {
-  let data = await fs.promises.readdir('blogdata');
+  let data = await fs.promises.readdir("blogdata");
   let allCount = data.length;
   let myfile;
   let allBlogs = [];
   for (let index = 0; index < 2; index++) {
     const item = data[index];
-    myfile = await fs.promises.readFile('blogdata/' + item, 'utf-8');
+    myfile = await fs.promises.readFile("blogdata/" + item, "utf-8");
     allBlogs.push(JSON.parse(myfile));
   }
 

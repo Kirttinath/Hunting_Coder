@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import styles from '../../styles/BlogPost.module.css';
-import * as fs from 'fs';
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import styles from "../../styles/BlogPost.module.css";
+import * as fs from "fs";
 
 const Slug = (props) => {
   function createMarkup(c) {
@@ -25,9 +25,9 @@ const Slug = (props) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: 'how-to-learn-flask' } },
-      { params: { slug: 'how-to-learn-javascript' } },
-      { params: { slug: 'how-to-learn-nextjs' } },
+      { params: { slug: "how-to-learn-flask" } },
+      { params: { slug: "how-to-learn-javascript" } },
+      { params: { slug: "how-to-learn-nextjs" } },
     ],
     fallback: true, // false or 'blocking'
   };
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug } = context.params;
 
-  let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8');
+  let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, "utf-8");
   return {
     props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props
   };
